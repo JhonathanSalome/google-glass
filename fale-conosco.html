@@ -1,0 +1,172 @@
+<!DOCTYPE html/>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tudo sobre Google Glass</title> <!-- nome da página -->
+        <link rel="stylesheet" href="_css/estilo.css"/> <!-- link do css -->
+        <link rel="stylesheet" href="_css/form.css"/>
+        <script language="javascript" src="_javascript/funcoes.js"> /* language="javascript, vai indicar para o navegador, que a sua language ou linguagem desse script que será carregador é em JavaScript" */ </script>
+        <script> /* local */
+            function calc_total() { /* function(função) chamada calc_total */
+                var qtd = parseInt(document.getElementById('cQtd').value); /* variável qtd(quantidade) recebe através do document.getElementById('cQua') o conteúdo de "quantidade" com id "cQua"; parseInt(converte para inteiro) */
+                tot = qtd * 1500; /* variável tot(total) vai ser qtd *(vezes) o valor do óculos */
+                document.getElementeById('cTot').value = tot; /* mostra na caixa de text	de 'Preço total' com id 'cPre' o valor .(ponto) value(valor) recebe tot(total) */
+                }
+        </script>
+    </head>
+    <body>
+
+        <!-- FTP(file transfer protocol)-->
+        <!-- <br> br quebra de linha -->
+
+        <div id="interface"> <!-- div com id, para a format no css -->
+            <header id="cabecalho"> <!-- cabeçalho, id(identificador) cabeçalho -->
+                <hgroup>
+                    <h1>Google Glass</h1>
+                </hgroup>
+                <img id="icone" src="_imagens/contato.png"/> <!-- imagem menu, id com icone, src(source, origem) é o caminho da image, caminho _imagens/contato.png -->
+                <nav id="menu"> <!-- nav, área de navegação, menu de nvegação página, com id="menu" -->
+                    <h1>Menu Principal</h1>
+                    <ul type="disc"> <!-- list ou listas do menu, ul, lista não ordenada ou lista com demarcadores parâmetro type(tipo)="square(transformar em pequenos quadrados) ou circle(pequenos círculos, com a borda preta e fundo branco) ou disc(valor padrão, pequenos círculos com fundo black)"
+
+                    start(início, parâmetro só aceita values numéricos)="" li, list items
+
+                    ol, lista ordenada, type(tipo)="1(tipo padrão, numericamente) ou a(ordenada alfabética) ou A ou i(números romanos) ou I" -->
+                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html" target="_self">Home</a></li>
+                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html" target="_self">Especificações</a></li>
+                        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html" target="_self">Fotos</a></li>
+                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html" target="_self">Multimídia</a></li>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html" target="_self">Fale conosco</a></li>
+                        <!-- cada vez que eu mover por cima de li ele muda a foto, usando mudaFoto
+
+                        onmouseover, passar mouse sob a opção, Home, ele vai modificar o icone para um icone de Home, então vou chama a function(função) "mudaFoto" é o parâmetro(), "lembrando, não vou poder utilizar aspas duplas, porquê já aspas duplas do parâmetro, com onmouseover" que vou passar é uma string, src(origen), vou informa o caminho da imagem,
+
+                        onmouseout, quando o mouse sair da opção Home, vou chama mais uma vez o mesmo evento "mudaFoto", passando de volta o link, dessa mesma imagem que no exemplo é óculos padrão(_imagens/glass-oculos-preto-peq.png),
+
+                        a, âncora, href(referência hipertexto)=" " target(que é alvo)="_blank(abre uma nova guia, link externo) ou _self(value padrão)" -->
+                    </ul>
+                </nav>
+            </header>
+            <section id="corpo-full"> <!-- seção(o que faz dividir lateralmente) com id(identificador) chamado corpo(área principal)-full, "lembrando que uma section pode ter vários article(artigo)" -->
+                
+                <!-- podemos ter mais de uma notícia ou artigo, dentro de uma mesma seção, nesse exemplo aqui, dentro da minha seção tenho apenas um artigo, lembrando uma mesma section pode ter vários article -->
+                <article id="noticia-principal"> <!-- article(artigo) com id noticia-principal, lembrando uma section pode ter vários articles -->
+                    <!-- dentro da section(seção) tem o article(artigo) esse artigo tem um header(cabeçalho) -->
+                    <header id="cabecalho-artigo"> <!-- header(cabeçalho) de article(artigo) com id(identificação, #) cabecalho-artigo -->
+                        <hgroup> <!-- área do capeçalho -->
+                            <!-- Tecnologias e inovações seria o "bread crumbs"(caminho de pão, caminho onde você vai navegar pelo site) -->
+                            <h3>Fale Conosco >&nbsp;Contatos</h3> <!-- &nbsp; o que significa "Non-breaking Space" ou "espaço sem quebra" -->
+                            <h1>Formulário de Contato</h1>
+                            <h2>por Jhonathan Salomé</h2>
+                        </hgroup>
+                    </header>
+                    <form method="POST" id="fContato" action="" oninput="calc_total();">
+                    <!-- from(formato, formulário), parâmetro method(método, get, post)
+                    
+                    -- método get(simples, ou busca) é o mais veloz porém menos seguro, veloz porquê ele vai pegar todos os dados do seu formulário é vai colocar na sua url(q query, =igual nome da caixa de texto, valores que foi digitado naquele formulário), "sempre que usar o método get, todos os dados de todos os objetos que estiverem no formulário vão ser colocados logo ápos a url, assim que enviar o formulário"
+                    
+                    -- método post(formulário complexos, senhas, números de card's), um pouco mais lento mas mais seguro, os dados são enviados diretamente por pacotes dentro da solicitação que você fez dentro do site, "lembrando importante dizer é que o método post não é tão seguro assim ele não incluir requisitos importantes como criptografia(precisar utilizar outros procolos muito mais podoresos)"
+
+                    id(identificador) fContato
+                        
+                    aciton(para onde esses dados vão ser enviados), action(para onde esses dados são enviado) mais simples envia por email(mailto, precisa de um cliente de email install) usa a cláusula mailto:endereço de email, esse método "mailto tem um grande problema porquê você precisar ter um cliente de email instalado no computador, no windowns(outlook), mac(meio)"
+
+                    oninput(quando digitar qualquer coisa ele vai disparar um procedimento chama " calc_total();") -->
+
+                        <fieldset id="usuario"><legend>Identificação do Usuário</legend> <!-- fieldset(conjunto de campos) id="usuario", legend(legenda, título) -->
+                            <p><label for="cNome">Nome:</label>
+                            <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+                            <p><label for="cSenha">Senha:</label>
+                            <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/></p>
+                            <p><label for="cMail">E-mail:</label>
+                            <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Digite seu Email"/></p>
+                            <!-- label(etiquetas, rótulo) usa parâmetro for(colocar o id),  "label também uma função semântica serve para identificar o objeto relativo a ele"
+
+                            input(entrada, button) type(criar caixa de text), usa text, "lembrando se não colocar type, o html vai considerar que é uma caixa de texto caso tenha uma valor inválido", vira uma box de text name(nome do objeto) id(identificação do objeto) size(tamanho da box em caracteres, quantidades de caracteres simultâneos vão aparecer) maxlength(comprimento máximo, quantidades de caracteres que vai aceita) placeholder(marcador de posição), dica do usuário de qual vai ser o conteúdo dessa box 
+
+                            o type email serve como uma forma de o navegador validar se esse email está no formato certo, que foi digitado nos padrões (@, domínio) -->
+                            <fieldset id="sexo"><legend>Sexo:</legend> <!-- fieldset(conjunto de campos) id="sexo" -->
+                                <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label><br/>
+                                <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+                                <!-- criar bolinhas botões de rádio(button radio),
+
+                                button radio dois relativos ao mesmo campo que é sexo(no exemplo), colocar qual o nome e id?
+                                Colocar o mesmo none e id, acontece erros,
+
+                                1. seleciona varios rádios e não vai deixar a partir de agora tirar a seleção de nenhum deles
+                                2. se clicar no masculino(a palavra) ele vai marca a palavra masculino é não a bolinha
+                                Correto,
+
+                                dentro de um mesmo grupo de objetos de rádio, todos aqueles que fizerem parte do grupo deve ter o mesmo name(nome),
+
+                                label(etiquetas, rótulo) utilizados para referenciar objetos aos seus id's(identificador)
+                                checked(marcado, para deixar marcado) -->
+                            </fieldset>
+                            <p><label for="cNasc">Data de Nascimento:</label>
+                            <input type="date" name="tNasc" id="cNasc"/></p> <!-- type, date(data, selecionar pelo calendário) -->
+                        </fieldset>
+
+                        <fieldset id="endereco"><legend>Endereço do Usuário</legend> <!-- fieldset(conjunto de campos) id="endereco", legend(legenda, título) -->
+                            <p><label for="cRua">Logradouro:</label>
+                            <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ..."/></p>
+                            <p><label for="cNum">Número:</label>
+                            <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p> <!-- input(entrada, button) type(criar caixa de text), usa text, "lembrando se não colocar type, o html vai considerar que é uma caixa de texto caso tenha uma valor inválido", vira uma box de text name(nome do objeto) id(identificação do objeto) size(tamanho da box em caracteres, quantidades de caracteres simultâneos vão aparecer) maxlength(comprimento máximo, quantidades de caracteres que vai aceita) placeholder(marcador de posição), dica do usuário de qual vai ser o conteúdo dessa box,
+
+                            o type number(número),
+
+                            min(mínimo valor ser aceito) max(máximo valor ser aceito) -->
+                            <p><label for="cEst">Estado:</label>
+                            <select name="tRes" id="cRes"></p> <!-- select(objeto, vai criar caixas combinadas) name(nome)tEst id(identificador)cEst -->
+                                <optgroup label="Região Sudeste"> <!-- optgroup(grupo de opção) no label(rótulo) região sudoeste -->
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG">Minas Gerais</option> <!-- option(opções) --> <!-- value(determinar values que sarão enviados caso o usuário escolha essa opção, que vai ser enviado para o banco de dados) -->
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS" selected>Rio Grande do Sul</option>
+                                </optgroup>
+                                <!-- tormar a opção padrão usa selected -->
+                            </select>
+                            <p><label for="cCid">Cidade:</label>
+                            <input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades"/></p>
+                            <!-- para fazer a ligação da datelist com a box de text, coloca o parâmetro dentro objeto input é o list(coloca o id datelist que é cidades), ele tem o sistema de auto-complemento no datelist -->
+                            <datalist id="cidades"> <!-- datelist(), id(identificador) cidades -->
+                                <option value="Rio de Janeiro"></option>
+                                <option value="Nava Iguaçu"></option>
+                                <option value="Niterói"></option>
+                                <option value="Belford Roxo"></option>
+                            </datalist>
+                        </fieldset>
+
+                        <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                            <p><label for="cGrau">Grau de Urgência:</label>
+                            Mín<input type="range" name="tGrau" id="cGrau" min="0" max="10" step="2"/>Máx</p> <!-- range(objeto que pode ir para esquerda e direita), min(mínima) e max(máxima) step(passos, dafinir o salto de para outro) -->
+                            <p><label for="cMen">Mensagem:</label>
+                            <textarea name="tMen" id="cMen" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p> <!-- textarea(são objetos de box de text maior que um objeto comum de box de text), name(nome)tMen, id(identificador)cMen, cols(quantidades de colunas que vai ser exibidas), rows(filas, quantidade de linhas) -->
+                        </fieldset>
+
+                        <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                            <p><input type="checkbox" name="tPed" id="cPed" checked/> <!-- type checkbox(caixa de seleção, caixinha quadrada que fica na frente dos objetos), checked(verificado) -->
+                            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                            <p><label for="cCor">Cor:</label> <!-- objeto de cor, caixa de cor(padrão é preto), para sair do padrão, coloca value é o código em hexadecimal -->
+                            <input type="color" name="tCor" id="cCor" value="#0000ff"/></p>
+                            <p><label for="cQtd">Quantidade:</label>
+                            <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"/></p>
+                            <p><label for="cTot">Preço Total: R$</label>
+                            <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/></p> <!-- readonly(parâmetro, somente leitura) -->
+
+                        </fieldset>
+                        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png"/> <!-- 1. submit(submissão, enviar); 2.image, com src(origem) para dentro da pasta imagens, file botão enviar -->
+                    </form>
+                </article>
+            </section>
+            <footer id="rodape"> <!-- confige ou configuração do radape -->
+                <p>Copyright &copy; 2023 - by Jhonathan Salomé<br/>
+                <a href="http://facebook.com.br" target="_blank">Facebook</a> | 
+                <a href="http://twitter.com.br" target="_blank">Twitter</a></p> <!-- links -->
+            </footer>
+        </div>
+    </body>
+</html>

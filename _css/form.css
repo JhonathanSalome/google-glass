@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+form { /* formatação do form(formulário) */
+    width: 500px;/* larguma de 500 pixes */
+    margin: auto; /* espaço externo automático(para que fique centralizado) */
+
+}
+input, textarea { /* configuração para input, adicional a funcionalidade na input textarea apenas colocar uma ,(vírgula) */
+    font-family: sans-serif; /* família das fontes, sans-serif(sem serifa) */
+    font-weight: normal; /* espessura da font, normal(para que não fique em negrito) */
+    font-size: 13pt;/* tamanho da font, 13pontos */
+    background-color: rgba(255, 255, 255, .8); /* background-color(cor de fundo) .8(transparência) */
+}
+
+input:hover, textarea:hover { /* quando passar o mouse por cima do objetos de caixa de text, todos os input e área de texto(textarea), vai evitar que fique cortada a iamgem dos url's dos fieldset */
+    background-color: #dddddd;/* background-color(cor de fundo) */
+}
+legend { /* formatação do legen */
+    color: #888888dc; /* color(cor) da letra */
+    font-weight: bold; /* font-weight(espessura da font), bold(dá uma ênfase) */
+    font-size: 13pt; /* font-size(tamanho da font) de 13pontos */
+    font-family: sans-serif; /* família das fontes, sans-serif(sem serifa) */
+}
+fieldset { /* confifuração do fieldset(são as bordas, border) */
+    border-color: #cece; /* bolder-color(cor da borda) */
+    margin: 20px; /* margin(área externa ao objeto) de 20 pixes */
+}
+fieldset#sexo { /* configuração do fieldset com id(identificador) sexo */
+    width: 140px; /* largura de 150 pixes */
+}
+fieldset#usuario { /* settings(definições) do fieldset com id(identificador) usuario */
+    background: url(../_imagens/icone-contato.png) no-repeat 95% 95%; /* background(fundo) que vai ser a url(é o endereço que o objeto vai ter), parâmetro no-repeat, 95%(porcento) lateral, 95% vertical */
+}
+fieldset#endereco {
+    background: url(../_imagens/icone-endereco.png) no-repeat 95% 95%;
+}
+fieldset#mensagem {
+    background: url(../_imagens/icone-mensagem.png) no-repeat 95% 95%;
+}
+fieldset#pedido {
+    background: url(../_imagens/icone-pagamento.png) no-repeat 95% 95%;
+}

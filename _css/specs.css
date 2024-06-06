@@ -1,0 +1,18 @@
+@charset "UTF-8"; /* charset é conjunto de caracteres latino */
+section#conteudo{ /* configuração(configure) do secetion#conteudo */
+    width: 1000px; /* largura com 1000pixes */
+    margin: auto; /* margin(margen, área externa ao objeto), automática */
+}
+
+iframe#frame-spec{ /* configuração(configure) do iframe com id frame-spec */
+    width: 445px; /* largura de 400 pixes */
+    height: 280px; /* altura de 280 pixes */
+    border: none; /* remover a borda(border) */
+    margin-left: 50px;
+    overflow: hidden; /* remover a vizualição do conteúdo, com overflow, hidden, ou seja, vai evitar que a rolagem aconteça */
+    /* essa configure não funciona em todos os navegadores, overflow: hidden; */
+}
+
+iframe#frame-spec::-webkit-scrollbar { /* confiure(configuração) de web-kit de iframe */
+    display: none; /* display: none ou não, ele escondeu a barras de rolagem */
+}

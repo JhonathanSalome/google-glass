@@ -1,0 +1,111 @@
+@charset "UTF-8"; /* charset é conjunto de caracteres latino */
+
+ul#album-fotos{ /* configuração do ul, com o id(identificador) "album-fotos" */
+    width: 700px; /* largura de 700px(pixes) */
+    margin: 0 auto; /* margim((área externa ao objeto) 0(zero) na esquerda e auto(automática) para toda as outras */
+    padding: 50px; /* padding(espaço interno do objeto) de 50 pixes */
+    overflow: hidden; /* a propriedade overflow específica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento. O uso da propriedade overflow com valor diferente de visible(seu valor padrão), criará um novo contexto de formatação de bloco */
+
+    /* hidden é um atributo booleano que indica se um elemento é ou não relevante. Por exemplo, ele pode ser usado para esconder elementos de página que não podem ser usados até que o processo de login seja completo */
+    
+    list-style: none; /* cada item não vai aparecer os ballts */
+}
+
+ul#album-fotos li{ /* configure(configuração) do ul, id(identificador) album-fotos, todos os li */
+    float: left; /* vai ficar a esquerda do outro, ou seja, um ao lado do outro */
+    width: 200px; /* largura de 200 pixes */
+    height: 200px; /* altura de 200 pixes */
+    margin: 10px; /* margim de 10px(pixes) fora de cada uma dessas caixas */
+    border: 5px solid #ffffff; /* border(borda) de 5px(pixes) solid white(branca) */
+    background-color: #ffffff; /* background-color(cor de fundo), white(branco) */
+    box-shadow: 1px 1px 3px rgba(0,0,0,.4); /* box-shadow(sombra da caixa) efeito de sombra, 1px(pixes) deslocamento lateral, 1px(pixes) deslocamento vertical, 3px(pixes) de espalhamento, com utilizando o rgba(0,0,0,.) black(preto) com o canal alfa .4 */
+    -webkit-transition: all .4s ease-in; /* all(monitora todos os efeitos), .4s(tempo da transição), ease-in(forma do efeito, vai cresça e amplie de maneira suave */
+}
+
+ul#album-fotos li span{ /* configure(configuração) do ul album-fotos, todos os li que tiver span dentro */
+    opacity: 0; /* opacity(opacidade) 0(zero) */
+    color: #ffffff; /* color da font, para branco(white) */
+    text-shadow: 1px 1px 1px #000000; /* text-shadow(sombra de text), tudo de 1px(pixes) e preto(black) */
+    background-color: rgba(0,0,0,.3); /* background-color(cor de fundo), 0, 0, 0, black(preto), .3transparente */
+    font-size: 9pt; /* tamanho da font(fonte) */
+    line-height: 370px; /* line-height(altura da linha), fazer com que a lengenda dessa */
+    padding: 5px; /* padding(espaço interno do objeto), aumentar a largura desse fundo */
+}
+
+ul#album-fotos li:hover { /* setting do ul#(id) album-fotos, todos os li hover */
+    -webkit-transform: scale(1.5); /* web-kit, scale(escala, zoom) */
+}
+
+ul#album-fotos li:hover span{ /* hover, passar o mouse, cada vez que eu passar o mouse meu span vai aparecer */
+    opacity: 1; /* opacidade 1 */
+}
+
+ul#album-fotos li#foto01{ /* configure(configuração) do ul album-fotos que tenha o li com o id foto 01 */
+    background: url('../_imagens/galeria-01.jpg') no-repeat; /* background(fundo) seja um url(caminho) que é o arquivo que esta na pasta anterior(destino), no-repeat, ele vai ter a configura de não se repetir */
+    background-position: 50% 50%; /* background-position(posição de fundo), vai mudar o posicionamento dessa imagem, 50% lateral, 50% vertical, ele vai mostra o meio da imagem */
+    background-size: 400px 400px; /* background-size(tamanho da imagem de fundo), colocar o tamanho original da imagem */
+    background-color: #ffffff; /* background-color(cor do fundo), white(branco) */
+}
+ul#album-fotos li#foto01:hover { /* settings do ul#(id) album-fotos que tenha li#(id) foto01, hover(sob-posição, vai dispara uma clase específica (uma formação específica) quando você passar o mouse em cima por cima do objeto */
+    background-position: 0px 0px; /* background-position(posição de fundo), vai volta a mostra a parte cima da tela */
+    background-size: 200px 200px; /* background-size(tamanho do fundo), 200 pixes, por 200 pixes */
+}
+
+ul#album-fotos li#foto02{
+    background: url('../_imagens/galeria-02.jpg') no-repeat; /* background seja um url que é o arquivo que esta na pasta anterior(destino), ele vai ter a configura de não se repetir */
+    background-position: 50% 50%; /* background-position(posição de fundo), vai mudar o posicionamento dessa imagem, 50% lateral, 50% vertical, ele vai mostra o meio da imagem */
+    background-size: 400px 400px; /* background-size(tamanho da imagem de fundo), colocar o tamanho original da imagem */
+    background-color: #ffffff; /* background-color(cor do fundo), white(branco) */
+}
+ul#album-fotos li#foto02:hover { /* settings do ul#(id) album-fotos que tenha li#(id) foto02, hover(sob-posição, vai dispara uma clase específica (uma formação específica) quando você passar o mouse em cima por cima do objeto */
+    background-position: 0px 0px; /* background-position(posição de fundo), vai volta a mostra a parte cima da tela */
+    background-size: 200px 200px; /* background-size(tamanho do fundo), 200 pixes, por 200 pixes */
+}
+
+ul#album-fotos li#foto03{
+    background: url('../_imagens/galeria-03.jpg') no-repeat; /* background seja um url que é o arquivo que esta na pasta anterior(destino), ele vai ter a configura de não se repetir */
+    background-position: 50% 50%; /* background-position(posição de fundo), vai mudar o posicionamento dessa imagem, 50% lateral, 50% vertical, ele vai mostra o meio da imagem */
+    background-size: 400px 400px; /* background-size(tamanho da imagem de fundo), colocar o tamanho original da imagem */
+    background-color: #ffffff; /* background-color(cor do fundo), white(branco) */
+}
+ul#album-fotos li#foto03:hover { /* settings do ul#(id) album-fotos que tenha li#(id) foto03, hover(sob-posição, vai dispara uma clase específica (uma formação específica) quando você passar o mouse em cima por cima do objeto */
+    background-position: 0px 0px; /* background-position(posição de fundo), vai volta a mostra a parte cima da tela */
+    background-size: 200px 200px; /* background-size(tamanho do fundo), 200 pixes, por 200 pixes */
+}
+
+ul#album-fotos li#foto04{
+    background: url('../_imagens/galeria-04.jpg') no-repeat; /* background seja um url que é o arquivo que esta na pasta anterior(destino), ele vai ter a configura de não se repetir */
+    background-position: 50% 50%; /* background-position(posição de fundo), vai mudar o posicionamento dessa imagem, 50% lateral, 50% vertical, ele vai mostra o meio da imagem */
+    background-size: 400px 400px; /* background-size(tamanho da imagem de fundo), colocar o tamanho original da imagem */
+    background-color: #ffffff; /* background-color(cor do fundo), white(branco) */
+}
+ul#album-fotos li#foto04:hover { /* settings do ul#(id) album-fotos que tenha li#(id) foto04, hover(sob-posição, vai dispara uma clase específica (uma formação específica) quando você passar o mouse em cima por cima do objeto */
+    background-position: 0px 0px; /* background-position(posição de fundo), vai volta a mostra a parte cima da tela */
+    background-size: 200px 200px; /* background-size(tamanho do fundo), 200 pixes, por 200 pixes */
+}
+
+ul#album-fotos li#foto05{
+    background: url('../_imagens/galeria-05.jpg') no-repeat; /* background seja um url que é o arquivo que esta na pasta anterior(destino), ele vai ter a configura de não se repetir */
+    background-position: 50% 50%; /* background-position(posição de fundo), vai mudar o posicionamento dessa imagem, 50% lateral, 50% vertical, ele vai mostra o meio da imagem */
+    background-size: 400px 400px; /* background-size(tamanho da imagem de fundo), colocar o tamanho original da imagem */
+    background-color: #ffffff; /* background-color(cor do fundo), white(branco) */        
+}
+ul#album-fotos li#foto05:hover { /* settings do ul#(id) album-fotos que tenha li#(id) foto05, hover(sob-posição, vai dispara uma clase específica (uma formação específica) quando você passar o mouse em cima por cima do objeto */
+    background-position: 0px 0px; /* background-position(posição de fundo), vai volta a mostra a parte cima da tela */
+    background-size: 200px 200px; /* background-size(tamanho do fundo), 200 pixes, por 200 pixes */
+}
+
+ul#album-fotos li#foto06{
+    background: url('../_imagens/galeria-06.jpg') no-repeat; /* background seja um url que é o arquivo que esta na pasta anterior(destino), ele vai ter a configura de não se repetir */
+    background-position: 50% 50%; /* background-position(posição de fundo), vai mudar o posicionamento dessa imagem, 50% lateral, 50% vertical, ele vai mostra o meio da imagem */
+    background-size: 400px 400px; /* background-size(tamanho da imagem de fundo), colocar o tamanho original da imagem */
+    background-color: #ffffff; /* background-color(cor do fundo), white(branco) */
+}
+
+/* zoom alt, está afastando a imagem, isso por que eu não estou fazendo a apliação desse li, foi criado um padding
+gigante, para que tenha a margin ou margi, essa margin e para eu puder crecer cada um desses itens */
+
+ul#album-fotos li#foto06:hover { /* settings do ul#(id) album-fotos que tenha li#(id) foto06, hover(sob-posição, vai dispara uma clase específica (uma formação específica) quando você passar o mouse em cima por cima do objeto */
+    background-position: 0px 0px; /* background-position(posição de fundo), vai volta a mostra a parte cima da tela */
+    background-size: 200px 200px; /* background-size(tamanho do fundo), 200 pixes, por 200 pixes */
+}

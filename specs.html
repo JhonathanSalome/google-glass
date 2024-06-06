@@ -1,0 +1,67 @@
+<!DOCTYPE html/>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tudo sobre Google Glass</title> <!-- nome da página -->
+        <link rel="stylesheet" href="_css/estilo.css"/> <!-- link do css, carregar o arquivo css -->
+        <link rel="stylesheet" href="_css/specs.css"/> <!-- link do css, carregar o arquivo css -->
+    </head>
+    <script language="javascript" src="_javascript/funcoes.js"> /* language="javascript, vai indicar para o navegador, que a sua language ou linguagem desse script que será carregador é em JavaScript" */ </script>
+    <body>
+        <div id="interface"> <!--div com id(interface), para a format no css-->
+            <header id="cabecalho"> <!-- cabeçalho -->
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+                <img id="icone" src="_imagens/glass-oculos-preto-peq.png"/> <!-- imagem menu, id(identificador) com icone, src(source, origem) é o caminho da image, caminho _imagens/glass-oculos-preto-peq.png -->
+                <nav id="menu"> <!-- menu da página -->
+                    <h1>Menu Principal</h1>
+                    <ul type="disc"> <!-- list pu listas do menu -->
+                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html" target="_self">Home</a></li>
+                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html" target="_self">Especificações</a></li>
+                        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html" target="_self">Fotos</a></li>
+                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html" target="_self">Multimídia</a></li>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html" target="_self">Fale conosco</a></li>
+                        <!-- cada vez que eu mover por cima de li ele muda a foto, usando mudaFoto
+
+                        onmouseover, passar mouse sob a opção, Home, ele vai modificar o icone para um icnone de Home, então vou chama a function ou função mudaFoto é o parametro que vou passar é uma string, vou informa o caminho da imagem
+                        onmouseout, quando o mouse sair da opção Home, vou chama mais uma vez o mesmo evento mudaFoto, passando de volta o link, dessa mesma imagem que no exemplo é óculos padrão -->
+                    </ul>
+                </nav>
+            </header>
+            <section id="corpo-full"> <!-- section com id(identificador) "corpo-full" vai ocupa toda a porção horizontal da pagina -->
+                <article id="noticia-principal"> <!-- article(artigo) com id(identificador) "noticia-principal", podemos ter mais de uma notícia ou artigo -->
+                    <header id="cabecalho-artigo">
+                        <hgroup> <!-- área do capeçalho -->
+                            <h3>Glass > Especificações</h3> <!-- Breadcrumb --> <!-- &nbsp; o que significa -->
+                            <h1>Raio-X no Google Glass</h1>
+                            <h2>por Jhonathan Salomé</h2>
+                        </hgroup>
+                    </header>
+                    <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+                    <section id="conteudo"> <!-- section(seção), id "conteudo" -->
+                        <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/> <!-- usemap(parâmetro) ou usa mapa, ou seja, qual o map(mapa) será usado, tenho a minha imagem, ligação entre o map é a imagem, dizendo para utilizar o map(mapa), que está nesse próprio document(documento) -->
+                        <map name="meumapa"> <!-- é relativo ao mapa da imagem, precisa também cria uma relação entre o map(mapa) é a imagem, precisa dar um name(nome) para o map(mapa), todo mapa é composto de áreas -->
+                            <area shape="poly" coords="185,220,267,208,269,243,185,257" href="google-glass.html#tela" target="janela"/>
+                            <area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela"/>
+                            <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela"/>
+                            <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela"/>
+                            <!-- toda área(area) tem seu shape definido ou formato da área ou shape, existem 3(três) tipo de shape, retângulos(rect, 1. x e y, canto superior esquerdo, 2.canto inferior direito), círculos(circle, 1. x e y, ponto central, 2.raio) e poligonal(poly, "lembrando, não tenho uma especificação de quantos pontos vou precisar, depende da área, sentido"), ápos preciso colocar minha coordenadas(quais são as coords desse shape), essas coordenadas vou precisar do valor precisos,
+
+                            href(carregado quando clicar com o mouse), vou open o file google-glass.html, (#)diretamente(área) posicionado no article(artigo) de tela,
+
+                            target(alvo) em que lugar o file será aberto -->
+                        </map>
+                        <iframe src="google-glass.html" name="janela" id="frame-spec"></iframe> <!-- iframe(Um Iframe é uma linha de código de programação que permite incluir um elemento HTML dentro de outro objeto HTML principal, carregar um conteúdo de um outro documento), name(nome) "janela", id(identificador) "frame-spec" -->
+                    </section>
+                </article>
+            </section>
+            <footer id="rodape"> <!-- confige ou configuração do radape -->
+                <p>Copyright &copy; 2023 - by Jhonathan Salomé<br/>
+                <a href="http://facebook.com.br" target="_blank">Facebook</a> | 
+                <a href="http://twitter.com.br" target="_blank">Twitter</a></p> <!-- links -->
+            </footer>
+        </div>
+    </body>
+</html>

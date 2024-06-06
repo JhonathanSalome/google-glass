@@ -1,0 +1,66 @@
+<!DOCTYPE html/>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/> <!-- charset é conjunto de caracteres latino -->
+        <title>Tudo sobre Google Glass</title> <!-- nome da página -->
+        <link rel="stylesheet" href="_css/estilo.css"/> <!-- link css, caminho _css\estilo.css -->
+        <link rel="stylesheet" href="_css/media.css"/> <!-- link css, caminho _css\media.css -->
+    </head>
+    <script language="javascript" src="_javascript/funcoes.js"> /* language="javascript, vai indicar para o navegador, que a sua language(linguagem) desse script que será carregador é em JavaScript" */ </script>
+    <body>
+        <div id="interface"> <!-- div com id, para a format no css -->
+            <header id="cabecalho"> <!-- cabeçalho -->
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+                <img id="icone" src="_imagens/multimidia.png"/> <!-- imagem menu, id com icone, src(source, origem) é o caminho da image, caminho _imagens/multimidia.png -->
+                <nav id="menu"> <!-- menu da página -->
+                    <h1>Menu Principal</h1>
+                    <ul type="disc"> <!-- list ou listas do menu -->
+                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html" target="_self">Home</a></li>
+                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html" target="_self">Especificações</a></li>
+                        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html" target="_self">Fotos</a></li>
+                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html" target="_self">Multimídia</a></li>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html" target="_self">Fale conosco</a></li>
+                        <!-- cada vez que eu mover por cima de li ele muda a foto, usando mudaFoto, onmouseover, passar mouse sob a opção, Home, ele vai modificar o icone para um icnone de Home, então vou chama a function ou função mudaFoto é o parametro que vou passar é uma string, vou informa o caminho da imagem
+                        onmouseout, quando o mouse sair da opção Home, vou chama mais uma vez o mesmo evento mudaFoto, passando de volta o link, dessa mesma imagem que no exemplo é óculos padrão -->
+                    </ul>
+                </nav>
+            </header>
+            <section id="corpo-full"> <!-- o corpo vai ocupa toda a porção horizontal da pagina, section, seção(o que faz dividir lateralmente) com identificador chamado corpo(área principal), "lembrando que uma section pode ter vários article(artigo)" -->
+                <article id="noticia-principal"> <!-- article(artigo) com id noticia-principal, podemos ter mais de uma notícia ou artigo -->
+                    <header id="cabecalho-artigo"> <!-- header(cabeçalho) de article(artigo) com id(identificação, #) cabecalho-artigo -->
+                        <hgroup> <!-- área do capeçalho -->
+                            <h3>Glass > Multimídia</h3> <!-- &nbsp; o que significa -->
+                            <h1>Sons e Vídeos</h1>
+                            <h2>por Jhonathan Salomé</h2>
+                        </hgroup>
+                    </header>
+                    <div id="tv-radio"> <!-- div id(nome, identificador) tv-radio -->
+                        <audio id="musica" controls="controls"> <!-- teg áudio, id musica -->
+                            <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/> <!-- source(origem), src(caminho do file) type(modelo) mpeg(mp3) -->
+                            <source src="" type="audio/x-aac"/> <!-- safari -->
+                            <source src="" type="audio/ogg"/> <!-- firefox, mp3 e ogg -->
+                            Desculpe, mas não foi possível carregar o áudio. <!-- mensagem será mostrada caso nenhum dos três source sejam compatíveis -->
+                        </audio>
+                        <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg"> <!-- teg vídeo, id filme, poster(pôster) -->
+                            <source src="_media/getting-started.mp4" type="video/mp4"/> <!-- source(origem), src(caminho do file) type(modelo) mp4(mp4) -->
+                            <source src="" type="video/webm"/> <!--  -->
+                            <source src="" type="video/ogg"/> <!--  -->
+                            Desculpe, mas não foi possível carregar o vídeo. <!-- mensagem será mostrada caso nenhum dos três source sejam compatíveis -->
+                        </video>
+                    </div>
+                    <!-- link do vídeo direto do youtube
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4EvNxWhskf8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    -->
+                </article>
+            </section>
+            <footer id="rodape"> <!-- confige(configuração) do radape -->
+                <p>Copyright &copy; 2023 - by Jhonathan Salomé<br/>
+                <a href="http://facebook.com.br" target="_blank">Facebook</a> | 
+                <a href="http://twitter.com.br" target="_blank">Twitter</a></p> <!-- links -->
+            </footer>
+        </div>
+    </body>
+</html>

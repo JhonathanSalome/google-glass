@@ -1,0 +1,305 @@
+@charset "UTF-8"; /* charset é conjunto de caracteres latino */
+/* área de font's */
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web); /* link da font, estou utilizando a importação por CSS, do google font's(apis) */
+@font-face{ /* configuração da fonte */
+    font-family: 'FonteLogo'; /* font-family(família de fontes), nome da font é FonteLogo */
+    src: url("../_fonts/bubblegum-sans-regular.otf"); /* src(source ou origem), com parâmetro url, nome do file */
+    /* o usuário não precisa ter essa font, instalada no sistema, o navegador vai buscar o file, instalá-lo */
+}
+
+/* css existe o id(identifica o objeto), classe(define a formatação de vários objetos) */
+
+body{ /* configure ou configuração do body */
+    font-family: Arial, sans-serif; /* font-family(família de fontes), Arial, sans-serif(qualquer outra font sem-serif) */
+	background-color: #dddddd; /* cor do fundo da página(site) */
+	color: rgba(0,0,0,1); /* color da fonte */
+}
+
+/* sempre que for um id: # */
+
+div#interface{ /* formatação da div com id interface */
+    width: 1000px; /* delimitar a width(largura) de 900 pixes */
+    background-color: #ffffff; /* background-color(cor de fundo), white */
+    margin: -20px auto 0px auto; /* margin área externa ao objeto, margin(centralização) da página, top -20px, right(direita) auto faz com que o navegador cuide automaticamente da margem, down(baixo), left(esquerda) */
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5); /* sombra em volta do objeto, deslocamento lateral, vertical, espalhamento da sompra, cor da sompra */
+    padding: 10px; /* espaço interno do objeto, se for igual para todos os values, basta informar apenas uma só */
+    /* preenchimento */
+}
+
+p{ /* configure do p, parágrafo */
+	text-align: justify; /* alinhar texts justify(alinhamento tanto à esquerda quanto à direita) */
+	text-indent: 50px; /* indentação do parágrafo, add um parâmetro "css", text-indent="50px"(marca de parágrafo) */
+}
+
+a{ /* configure a(link) */
+    color: #606060; /* color(cor) da font */
+    text-decoration: none; /* text-decoration(decoração de texto), none(não vai tem subrilhado) */
+}
+
+a:hover{ /* quando passar o mouse por cima do a(link) ele fica subrilhado */
+    text-decoration: underline; /* text-decoration(decoração de texto), underline(sublinhado) */
+}
+
+/* configuração do oculos */
+header#cabecalho img#icone{ /* área do header com id cabecalho, dentro do cabecalho tenho o img com id icone */
+    position: absolute; /* position(posição) absolute(absoluta) */
+    left: 980px; /* left(esquerdo) com 850 pixes */
+    top: 75px; /* top(cima) com 40 pixes */
+    
+    /* configure ou configuração sob tamanho da imagem
+    width: 100%;
+    max-width: 160px;
+    max-height: 100px; */
+}
+
+header#cabecalho{ /* configuração do header, id cabecalho, cria linha, parametro de borda */
+    border-bottom: 1px #606060 solid; /* borda inferior */
+    /* vamos indicar três parâmetros,
+    width da borda em pixes, cor da borda,
+    formato dessa borda(dashed: tracejado; outset; inset; dotted, pontilhado; double, mais ênfase) */
+    
+    /* border-bottom: borda de baixo */
+    /* border-left: borda da esquerda */
+    /* border-right: borda da direita */
+    /* border-top: borda de cima */
+    /* border-top-color: a cor da borda do topo */
+    
+    height: 150px; /* parâmetro de altura com 150 pixces */
+    /* Utilizando CSS dentro de um objeto */
+
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* é um background, background(do objeto, header) vai ser composto por uma imagem, utiliza a referência url(é o endereço que o objeto vai ter), parâmetro no-repeat: para não repita o objeto, deslocamento lateral com 0 pixes, deslocamento vertical com 80 pixes */
+
+    /* posição: lateral, vertical */
+}
+
+header#cabecalho h1{ /* objeto header com id cabeçalho todo objeto que for h1 */
+    font-family: 'FonteLogo', sans-serif; /* família de fontes, nome da font('FontLogo'), sem serifa */
+    font-size: 30pt; /* tamanho da fonte com 30 pontos */
+    color: #606060; /* cor da fonte, cinza escuro */
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6); /* sombra de texto, 1px deslocamentro 1px deslocamentro vertical 1px espalhamentro, cor rgba(0,0,0, .6), 0,0,0 define o preto, .6, transparência, pra ele fica com 60% no canal alfa */ 
+    padding: 0px; /* espaço interno, com 0 pixes */
+    margin-bottom: 0px; /* espaço externo, margim de baixo, com 0 pixes */
+}
+
+header#cabecalho h2{ /* header com id cabecalho todo objeto que for h2 */
+    font-family: 'Titillium Web', sans-serif; /* integração da font no CSS, do google font(apis da google) */
+    color: #888888; /* cor da font */
+    font-size: 15pt; /* tamanho da font com 15 pontos */
+    padding: 0px; /* espaço interno, com 0 pixes */
+    margin-top: 0px; /* espaço externo, margim de cima, com 0 pixes */
+}
+
+/* --> nos parâmetro class, precisa colocar o nome da tag.(ponto) no da class, para identificar a classe usa .(ponto) */
+
+/* Formatação de imagens com legendas */
+figure.foto-legenda{ /* Formatação de imagens com legendas */
+	position: relative; /* posição relativa */
+	border: 8px solid white; /* borda, largura da borda 8 pixes, tipo de borda, solid, cor da broda, white */
+	box-shadow: 1px 1px 4px black; /* sombra, horizontal, vertical, espalhamento, cor */
+}
+
+figure.foto-legenda img{ /* figure.foto-legenda tudo que for img */
+    /* tudo adquadro ao tamanho, aumentar ou diminuir, o arquivo vai aumentar e diminuir automaticamente, também chegando ao limite da interface */
+	width: 100%; /* largura de 100% */
+	height: 40%; /* altura de 100% */
+}
+
+figure.foto-legenda figcaption{
+	opacity: 0; /* opacidade, zero */
+	/* ele vai ter uma posição absoluta dentro do seu contener, que no caso é a borda branca 
+	pocisão absoluta */ 
+	position: absolute; /* posição absoluta, ter uma posição absoluta dentro do seu container, que é uma borda */
+	top: 0px; /* top ou acima */
+	background-color: rgba(0,0,0,.4); /* camada transparente no fundo da legenda, alpha cria uma caixa */
+	color: white;/*cor da letra */
+    /* a borda preta vai ocoupa todos espaço da imagem */
+	width: 100%; /* largura 100% */
+	height: 100%; /* altura */
+	padding: 10px; /* preenchimento espaço entre as legendas */
+    /* criar um espaço dentro dessa legenda */
+	box-sizing: border-box; /* cria um box dentro da borda */
+	transition: opacity 1s; /* transition(efeito de transição) opacidade(parametro que eu quero a transição) tempo que ele vai levar */
+}
+
+/* sob-posição, o hoven vai dispara uma clase específica (uma formação específica) quando você passar o mouse em cima por cima do objeto(figcaption) */
+figure.foto-legenda:hover figcaption{
+	opacity: 1; /* opacidade 1(que é 100%) */
+}
+
+/* Formatação do Menu */
+nav#menu{ /* formatação do nav, com id(usa #) menu */
+    display: block; /* Primeiro paso, fazer com que meu navegador menu seja exebido como um blco, um bloco pode flutuar pela tela */
+}
+
+/* sempre que for um id: # */
+nav#menu ul{ /* nav, com id menu tudo que for ul */
+    list-style: none; /* list-style(lista de estilo), nane(não) apaga os marcadores */
+    text-transform: uppercase; /* todas as letras em maíusculas */
+    position: absolute; /* posição(absoluta ou relativa), para que ele possa passar por cima dos documentos, no caso eu tenho o "nav", e detro do "nav", tenho o "ul", configuranto a posições, que vão mexer no tpo e na esquerda, a posição relativa, vou mexer no ul, ou seja, só vou conseguir mexer nele dentro do seu conterner.
+    Se for a posição absoluta, vou estravaza isso, ai vou está me referindo a posição absoluta dentro do site.
+    
+    #posição relativa: ele fica dentro do conterner
+    #posição absoluta: ele fica livre pelo site */
+    top: -20px; /* top(cima), o site tem uma margem padrão */
+    left: 40%; /* left(esquerda) aumentar a distância do lado esquerdo */
+}
+
+/* formatação para cada item na lista */
+nav#menu li{ /* nav, com id menu tudo que for li(items list) */
+    display: inline-block; /* vai fazer que um bloco seja exibido em uma mesma linha, horizontalmente */
+    background-color: #dddddd; /* cor no fundo, cinza-claro */
+    padding: 10px; /* espaço dentro da box, que contém o objeto com 10 pixes */
+    margin: 2px; /* espaço fora da box */
+    /* no exemplo é o espaço entre os botões, no caso é a metade dele, controla o espaço fora dele, espaço entres os botões, 2px gera marge de 4px, */
+    transition: background-color 1s; /* transições, vou fica monitorando o background-color(que é o que vai ficar mudando),quanto tempo que vai levar essa transição */
+
+    /* manter a retrocompatibilidade
+    prefixr.com é um Cross-Browser, ele vai criar todo código necessário, para que as linhas que foi digitadas, funcione no maior números de navegadores possíveis, ele vai gerar o código necessário, para todos os web's kit de navegadores diferentes
+    1-safari, 2-firefox, 3-opera, 4-microsoft, 5-mando que eu digitei, tem versão que pode comprimir seu código */
+
+    /* ele ter uma versão que consegui comprir o código também, ele consegui condensar certas tegs em uma teg só, que é possível em CSS3 */
+}
+
+nav#menu li:hover{ /* hover: éo efeito que vai ser aplicado, quando passar o mouse por cima do li(list items) */
+    background-color: #606060; /* cor no fundo, cinza-mais escuro */
+}
+
+nav#menu h1{ /* formatação nav#Menu pro h1 */
+    display: none; /* display(exibição), none(nenhum) esconder */
+}
+
+nav#menu a{ /* todo nav que tenha id menu e que tenha um a(link, âncora) */
+    color: #000000; /* cor preta do menu */
+    text-decoration: none; /* tirar o subrilhado */
+}
+
+nav#menu a:hover{ /* fazer com que o link mude de cor quando estiver ativo sob o mouse */
+    color: #ffffff; /* mudar a cor para branco */
+    text-decoration: underline; /* subrilhar o link só quando o mouse passar por cima */
+}
+
+section#corpo{ /* configure da section que chama corpo */
+    display: block; /* exibição, vai mostrada como um bloco */
+    width: 500px; /* define a largura dela */
+    float: left; /* faz com que minha section flutue pelo lado(pode define outros lados) esquerdo */
+    
+    /* Atenção para usar o float, você precisa esta com os objetos configurado para ser mostrado em blocos e assim eles vão poder flutuar um do lado do outro */
+    
+    /* linha lateral apenas do lado direito */
+    border-right: 1px solid #606060; /* criar uma borda do lado right, após preciso inficar 3(três) parâmetros,
+    1.largura, de 1 px, que é a expresura;
+    2.Tipo de linha, como dotted, dashed, solid;
+    3. cor da linha */
+    padding-right: 15px; /* espaço interno da direita de 15 pixes */
+}
+
+article#noticia-principal h2{ /* formatação do article com id noticia-principal todos os h2 */
+    font-size: 13pt; /* tamanho da fonte com 13 pontos */
+    color: #606060; /* color(cor) */
+    background-color: #dddddd; /* cor de fundo */
+    padding: 5px 0px 5px 10px; /* padding(espaço interno do objeto), espaçamento entre eles, 5px em cima, 0px na direita, 5px em baixo, 0px na esquerda */
+    margin: 10px 0px 10px 0px; /* margin(área externa ao objeto) margem dos titulos, em cima, direita, em baixo, a esquerda */
+}
+
+header#cabecalho-artigo h1{ /* format(formatação) do cabeçalho-artigo h1 */
+    font-family: 'FonteLogo', sans-serif; /* font-family(família de fontes), 'Fontlogo'ou qualquer uma sem seif */
+    font-size: 20pt; /* tamanho da font, com 20 pontos */
+    color: #606060; /* color(cor) da font */
+    margin-bottom: 0px; /* margin-bottom(espaço fora da box, espaço externo em baixo) com 0 pixes */
+    margin-top: 0px; /* margin-top(espaço fora da box, espaço externo do topo) com 0 pixes */
+}
+
+.direita{ /* formatação de class .(ponto)direita */
+    text-align: right; /* text-align(alinhamento de texto), move para a direita */
+}
+
+header#cabecalho-artigo h2{ /* format(formatação) do cabeçalho-artigo h2 */
+    font-size: 13pt; /* tamanho da font com 30 pontos */
+    color: #cecece; /* cor da font */
+    background-color: #ffffff; /* cor do fundo */
+    margin: 0px; /* margin(espaço fora da box, espaço externo) com 0 pixes */
+}
+
+header#cabecalho-artigo h3{ /* format(formatação) do cabeçalho-artigo h3 */
+    font-size: 12px; /* tamanho da font 12 pixes */
+    color: #606060; /* cor da font */
+}
+
+table#tabelaspec{ /* tudo que for table (id) tabelaspec */
+    border: 1px solid #606060; /* configure da border(cria uma borda externa), com 1 pixes de espesura, solida(solid) e zinza escura */
+    border-spacing: 0px; /* border-spacing, o espaço entre as células, remove os espaços entre as bordas(border) */
+    margin-left: auto; /* margin-left(margem esquerda) centralizar a tabela(table), auto() */
+    margin-right: auto; /*margin-right(margem direita) auto */
+}
+
+table#tabelaspec td{ /* formatação do table com identificador(id) tabelaspec tudo que for td */
+    border: 1px solid #606060; /* configure da border(cria uma borda externa), com 1 pixes de espesura, solida(solid) e zinza escura */
+    padding: 10px; /* padding, espaço interno de todos os objetos, mais espaços entro que cáda célula, com 10 pixes */
+    
+    /* existem dois parâmentro de aliamentos dentro de tabela(table) */
+    text-align: center; /* aliamento do texo, aliados a direita(right), centalizado(center) */
+    vertical-align: middle; /* aliamento vertical, top(topo), bottom(abaixo), middle(padrão) */
+}
+
+/* para identificar a classe usa .(ponto) */
+
+table#tabelaspec td.ce{ /* table(tabela) de tablespec, tudo da clase ou class ce(células esquerda) */
+    color: #ffffff; /* cor(color) da fonte ou font, branca(white) */
+    background-color: #606060; /* cor(color) de fundo */
+    vertical-align: top; /* configura(configure), o aliamento das células, */
+    font-weight: bold; /* font weight(intensidade da fonte), bold(negrito) */
+}
+
+table#tabelaspec td.cd{ /* formatação para a table(tabela) cd(células,coluna da direita) */
+    background-color: #cecece; /* cor(color) de fundo */
+    /* color: white; cor ou color da fonte ou font */
+}
+
+table#tabelaspec caption{ /* formatação da table (id) tablespec tudo que for caption */
+    color: #888888; /* color(cor) de font(fonte) */
+    font-size: 13pt; /* tamanho da fonte com 13pt(pontos) */
+    font-weight: bolder; /* intensidade da fonte, negrito */
+}
+
+table#tabelaspec caption span{ /* table (id) tablespec tem um caption que tem span */
+    display: block; /* ele vai ser mostrado como um bloco(block) flutuando, ele vai desconectar do text ou texto */
+    float: right; /* flutuação a direita */
+    color: #000000; /* font(fonte), black(preta) */
+    font-size: 8pt; /* tamanho de 8pt(pontos) */
+    margin-top: 10px; /* aumentar a margin do top(topo) com 10 pixes */
+}
+
+aside#lateral{ /* configure do aside ou barra lateral */
+    display: block; /* exibição em bloco */
+    width: 435px; /* largura em 350 pixes */
+    float: right; /* fllutue para o lado direito */
+    background-color: #dddddd; /* color de fundo */
+    padding: 10px; /* configure o padding interno(espaço interno do objeto) */
+    margin-top: 10px; /* margin-top(espaço fora da box, espaço externo, em cima) com 10 pixes */
+    margin-right: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5) /* colocar uma discreta sobra, dislocamento lateral e vertical, espalhamento e a color(cor) rgba(0,0,0,.5), significa preto com 50% de transpârencia */
+}
+
+aside#lateral h1{ /* configure do aside(barra lateral ou contéudo períferico que tem no site) tudo que for h1 */
+    font-family: 'FonteLogo', sans-serif; /* família de fontes, nome da font('FontLogo'), sem-serifa*/
+    font-size: 20pt; /* tamanho da font com 20 pontos */
+    color: #606060; /* cor da font */
+    margin-top: 0px; /* margin-top(espaço fora da box, espaço externo do top) com 0 pixes */
+}
+
+aside#lateral h2{ /* configure do aside(barra lateral ou contéudo períferico que tem no site) tudo que for h2 */
+    background-color: #606060; /* color de fundo */
+    font-size: 13pt; /* tamanho da font com 13 pontos */
+    color: #ffffff; /* color(cor) da font */
+    padding: 5px; /* configure o padding interno(espaço interno do objeto) */
+}
+
+footer#rodape{ /* configure do rodapê, footer com identificação rodape */
+    /* tem uma sesão flutuando a left(esquerda) e um conteúdo periférico flutuando à direita, o footer vai precisar limpar toda essa divisão que foi feita */
+    clear: both; /* limpe a configure dos 2(dois) lados, faz com que o rodapê, mostre fora da divisão */
+    border-top: 1px solid #606060; /* borda em cima, com 1 pixes, solid, cor */
+}
+
+footer#rodape p{ /* vou fazer com que no, footer#(chamado)rodapé tudo o que foi p(paragráfo) */
+    text-align: center; /* alinhamento de text no centro */
+}

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html/> <!-- html foca em semântica, que é o significado das coisas -->
+<html lang="pt-br"> <!-- caracter em latino -->
+	<head> <!-- cabeça(configurações comportamentais) -->
+		<meta charset="UTF-8"/> <!-- charset é conjunto de caracteres latino -->
+		<title>Tudo sobre Google Glass</title> <!-- título da página -->
+		<link rel="stylesheet" href="_css/estilo.css"/> <!-- faz uma ligação entre o file html eo css, link parâmetro rel(for falar qual é a categoria the file que está sendo linkando) como stysheet(folha de estilo), type(modelo, tipo) como text(texto)/css, href(hypertext reference, referência de hipertexto) qual file será carregado -->
+	</head>
+	<script language="javascript" src="_javascript/funcoes.js"> /* language= "javascript(vai indicar para o navegador), que a sua linguagem do script que será carregado é em js(por padrão o html considera está linguagem como mais utilizada, não é necessário), linguagem desse script que será carregador é em JavaScript", src(origem)="folder(pasta) onde se encontra o file funcoes" */
+	</script>
+	<body> <!-- corpo -->
+		<div id="interface"> <!-- div(área de divisão da página) com id(identificação), para a format no css -->
+				<header id="cabecalho"> <!-- header(cabeçalho) principal do site -->
+					<hgroup> <!-- grupo de títulos(isso é semântica) -->
+						<h1>Google Glass</h1>
+						<h2>A revolução do Google está chegando</h2>
+					</hgroup>
+					<img id="icone" src="_imagens/glass-oculos-preto-peq.png"/> <!-- id com icone, src(source, origem) é o caminho da image, lembrando carrega o tamanho normal do file -->
+					<nav id="menu"> <!-- nav, área de navegação, menu de nvegação página, com id="menu" -->
+						<h1>Menu Principal</h1>
+						<ul type="disc"> <!-- list ou listas do menu -->
+						<!-- ol, lista ordenada, type(tipo)="1(tipo padrão, numericamente) ou a(ordenada alfabética) ou A ou i(números romanos) ou I"
+
+						start(início, parâmetro só aceita values numéricos)="" li, list items
+
+						ul, lista não ordenada ou lista com demarcadores parâmetro type(tipo)="square(transformar em pequenos quadrados) ou circle(pequenos círculos, com a borda preta e fundo branco) ou disc(valor padrão, pequenos círculos com fundo black)" -->
+							<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html" target="_self">Home</a></li>
+							<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html" target="_self">Especificações</a></li>
+							<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html" target="_self">Fotos</a></li>
+							<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html" target="_self">Multimídia</a></li>
+							<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html" target="_self">Fale conosco</a></li>
+							<!-- cada vez que eu mover por cima de li ele muda a foto, usando mudaFoto
+
+							onmouseover, passar mouse sob a opção, Home, ele vai modificar o icone para um icone de Home, então vou chama a function(função) "mudaFoto" é o parâmetro(), "lembrando, não vou poder utilizar aspas duplas, porquê já aspas duplas do parâmetro, com onmouseover" que vou passar é uma string, src(origen), vou informa o caminho da imagem
+							onmouseout, quando o mouse sair da opção Home, vou chama mais uma vez o mesmo evento "mudaFoto", passando de volta o link, dessa mesma imagem que no exemplo é óculos padrão(_imagens/glass-oculos-preto-peq.png)
+
+							a(âncora) href(referência hipertexto)=" " target(que é alvo)="_blank(abre uma nova guia, link externo) ou _self(value padrão)" -->
+						</ul>
+					</nav>
+				</header> <!-- começa aqui, o corpo -->
+			<section id="corpo"> <!-- section, seção(o que faz dividir lateralmente) com identificador chamado corpo(área principal), "lembrando que uma section pode ter vários article(artigo)" -->
+				<article id="noticia-principal"> <!-- article(artigo) com id noticia-principal, podemos ter mais de uma notícia ou artigo, dentro de uma mesma seção, nesse exemplo aqui, dentro da minha seção tenho apenas um artigo, lembrando uma mesma section pode ter vários article -->
+
+					<!-- dentro da section(seção) tem o article(artigo) esse artigo tem um header(cabeçalho) -->
+					<header id="cabecalho-artigo"> <!-- header(cabeçalho) de article(artigo) com id(identificação, #) cabecalho-artigo -->
+						<hgroup> <!-- área do capeçalho -->
+							<!-- Tecnologias e inovações seria o "bread crumbs"(caminho de pão, caminho onde você vai navegar pelo site) -->
+							<h3>Tecnologia >&nbsp;Inovações</h3> <!-- &nbsp; o que significa "Non-breaking Space" ou "espaço sem quebra" -->
+							<h1>Saiba tudo sobre o Google Glass</h1>
+							<h2>por Jhonathan Salomé</h2>
+						</hgroup>
+					</header>
+					<!-- quebra de linha ou break row <br/> -->
+					<h2>O que é</h2>
+					<!-- text-indent faz a indentação do parágrafo(marca de parágrafo) -->
+					<!-- forma certa, style="text-align: center", ou left(valor padrão), ou right(alinhamento a direita) -->
+					<!-- align="center", alinhar no centro -->
+					<!-- <h2 style="text-align:right">O que é</h2> -->
+					<!-- <b> bold -->
+					<!-- <i> itálico,  está dizendo para o navegador você quer a letra inclinada -->
+					<!-- <u>(underline) sublinhado -->
+					<!-- <s> strike ou riscado -->
+					<!-- <del> texto que foi deletado -->
+					<!-- <sup> vai gerar um resultado de sobrescrito -->
+					<!-- <sub> subscrito -->
+					<p>O <span style="font-weight:900;">Google Glass</span> <!-- style="text-align: center(centro), left(valor padrão), right(alinhamento a direita), justify"(alinhamento tanto à esquerda quanto à direita),
+
+					font weight, qual a quantidade de negrito que o texto terá, bold(gera o resultado em negrito), bolder(mais negrito que o negrito),
+
+					<span style="text-decoration: "> para formatar pequenos trechos de texto, u, underline(sublinhado) ou s, strike(riscado) ou agora usa del, vai indicar que é um text deletado ou overline(linha acima do text) ou line-through(riscado, sem o resultado semântico) ou none(gera um texto sem decoração nenhuma) --> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="" target="_blank">Project Glass</a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferên&shy;<!-- &shy é Soft Hyphen ou Hifenização Rápida -->cias. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em><!-- i(itálico) ou em(ênfase), além da letra inclinada, gera um resultado semântico que é uma palavra ou um termo em ênfase --> encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.
+					</p>
+					<!-- caráter semântico, caráter de significado na construção de site, tem uma área específica para delimitar imagen que fazem partes de conteúdo -->
+					<!-- para colocar imagens é dar um significado semântico para elas, avalia o conteúdo que está em torno dela(imagen), dentro de um site -->
+					<figure class="foto-legenda"> <!-- classe, foto-legenda -->
+						<img src="_imagens/glass-quadro-homem-mulher.jpg"/> <!-- imagem, src(source, origem) é o caminho da image -->
+						<figcaption> <!-- colocar legenda na imagem, pode ser texts composto, com títulos também -->
+							<h3>Google Glass</h3>
+							<p>Uma nova maneira de ver o mundo.</p>
+						</figcaption>
+					</figure>
+					<h2>Especificações Técnicas</h2>
+					<table id="tabelaspec"> <!-- configuração(configere) da tabela(table) com id tabelaspce -->
+						<caption>Tabela Técnica do Google Glass <span>Mar/2013</span></caption> <!-- título da table, span(período) -->
+							<tr><td class="ce">Tela</td><td class="cd">Resolução equivalente a tela de 25"</td></tr> <!-- <tr> table rows(linhas da table); <td> table data(células são dados que compor a table), class="ce" (coluna esquerda) -->
+							<tr><td rowspan="2" class="ce">Camera</td> <td class="cd">5MP para fotos</td></tr> <!-- <tr> table rows(linhas da table); <td> table data(células são dados que compor a table), rowspan="2", espansão em linha, vamos diz que ele vai ocupar 2 linhas, class="ce" (coluna esquerda) -->
+							<tr><td class="cd">720p para vídeos</td></tr> <!-- class="cd" (coluna da direita) -->
+							<tr><td rowspan="2" class="ce">Conectividade</td> <td class="cd">Wi-Fi</td></tr>
+							<tr><td class="cd">Bluetooth</td></tr>
+							<tr><td class="ce">Memória Interna</td> <td class="cd">12GB</td></tr>
+
+							<!-- colspan, espansão em colunas, elas vão fazer que uma mesma célula, ocupe mais de uma coluna, <tr><td colspan="2">Linha Extra</td></tr> -->
+
+					</table><!-- fim da tabela -->
+					<h2>Como funciona</h2>
+					<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
+					<h2>O que você pode fazer com o Google Glasses</h2>
+					<p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr/>humano”<!-- wbr(ou Word Breaker), especifica onde em um texto seria ok adicionar uma quebra de linha -->, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
+					<div>
+						<video id="video-central" controls="controls" poster=" "> <!-- teg vídeo, id(identificador) filme, controls(especifica que os controles de áudio/vídeo devem ser exibidos), poster(pôster) -->
+						<source src="_media/one-day.mp4" type="video/mp4"/> <!-- src(origem)="folder(pasta) onde se encontra o file, type(modelo, tipo)  -->
+						<source src="" type="video/webm"/> <!-- src(origem)="folder(pasta) onde se encontra o file, type(modelo, tipo)  -->
+						<source src="" type="video/ogg"/> <!-- src(origem)="folder(pasta) onde se encontra o file, type(modelo, tipo)  -->
+						Desculpe, mas não foi possível carregar o vídeo. <!-- mensagem será mostrada caso nenhum dos três source sejam compatíveis -->
+						</video>
+					</div>
+				</article>
+			</section> <!-- termina aqui, o corpo -->
+			<aside id="lateral"> <!-- aside(conteúdo periférico, área lateral ou próximo ao conteúdo principal), com id lateral continuação da página na direita -->
+				<h1>Outras Notícias</h1>
+				<h2>Vídeo mais recente</h2>
+				<div>
+					<video id="video-late" controls="controls" poster=" "> <!-- teg vídeo, id filme, controls(especifica que os controles de áudio/vídeo devem ser exibidos, controls especifica que os controles de áudio/vídeo devem ser exibidos), poster(pôster) -->
+					<source src="_media/how-it-feels.mp4" type="video/mp4"/> <!-- src(origem)="folder(pasta) onde se encontra o file, type(modelo, tipo) -->
+					<source src="" type="video/webm"/> <!-- src(origem)="folder(pasta) onde se encontra o file, type(modelo, tipo)  -->
+					<source src="" type="video/ogg"/> <!-- src(origem)="folder(pasta) onde se encontra o file, type(modelo, tipo)  -->
+					Desculpe, mas não foi possível carregar o vídeo. <!-- mensagem será mostrada caso nenhum dos três source sejam compatíveis -->
+					</video>
+				</div>
+				<h2>Novidades no Glass</h2>
+				<p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
+				<p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>
+			</aside>
+			<footer id="rodape"> <!-- confige ou configuração do radapé(área de baixo) -->
+				<p>Copyright &copy; 2023 - by Jhonathan Salomé<br/>
+				<a href="http://facebook.com.br" target="_blank">Facebook</a> | 
+				<a href="http://twitter.com.br" target="_blank">Twitter</a></p> <!-- links -->
+			</footer>
+		</div>
+	</body>
+</html>

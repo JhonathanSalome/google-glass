@@ -1,0 +1,60 @@
+<!DOCTYPE html/>
+<html lang="pt-br"> <!-- caracter em latino -->
+<head>
+	<meta charset="UTF-8"/> <!-- charset é conjunto de caracteres latino -->
+	<title>Tudo sobre Google Glass</title> <!-- nome da página -->
+	<link rel="stylesheet" href="_css/estilo.css"/> <!-- link do css, carregar o arquivo css -->
+    <link rel="stylesheet" href="_css/fotos.css"/> <!-- link do css, carregar o arquivo css -->
+</head>
+<script language="javascript" src="_javascript/funcoes.js"> /* language="javascript, vai indicar para o navegador, linguagem desse script que será carregador é em JavaScript" */ </script>
+    <body>
+        <div id="interface"> <!-- div com id, para a format no css -->
+            <header id="cabecalho"> <!-- cabeçalho -->
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+                <img id="icone" src="_imagens/fotos.png"/> <!-- imagem no menu(id com icone, src(source, origem, é o caminho da image), lembrando carrega o tamanho normal do file) -->
+                <nav id="menu"> <!-- menu da página -->
+                    <h1>Menu Principal</h1>
+                    <ul type="disc"> <!-- list ul(lista não numerada) listas do menu -->
+                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="index.html" target="_self">Home</a></li>
+                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="specs.html" target="_self">Especificações</a></li>
+                        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fotos.html" target="_self">Fotos</a></li>
+                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="multimidia.html" target="_self">Multimídia</a></li>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fale-conosco.html" target="_self">Fale conosco</a></li>
+                        <!-- onmouseover, passar mouse sob a opção, Home, ele vai modificar o icone para um icnone de Home, então vou chama a function(função) mudaFoto(parâmetro) que vou passar é uma string, vou informa o caminho da imagem
+
+                        onmouseout, quando o mouse sair da opção Home, vou chama mais uma vez o mesmo evento mudaFoto, passando de volta o link, dessa mesma imagem que no exemplo é óculos padrão -->
+                    </ul>
+                </nav>
+            </header>
+            <section id="corpo-full"> <!-- seção, id "corpo-full", o corpo vai ocupa toda a porção horizontal da pagina -->
+                <article id="noticia-principal"> <!-- article(artigo) com id(identificador) "noticia-principal", podemos ter mais de uma notícia ou artigo -->
+                    <header id="cabecalho-artigo">
+                        <hgroup> <!-- área do capeçalho -->
+                            <h3>Glass > Fotos</h3> <!-- &nbsp, o que significa -->
+                            <h1>Galeria de Imagens do Google Glass</h1>
+                            <h2>por Jhonathan Salomé</h2>
+                        </hgroup>
+                    </header>
+                    <p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+                    <ul id="album-fotos"> <!-- ul(lista não númerada) eo id(identificador) "album-fotos" -->
+                        <li id="foto01"><span>Agenda e lembretes</span></li>
+                        <li id="foto02"><span>Sergey Brin usando o Glass</span></li>
+                        <li id="foto03"><span>Leve e compacto</span></li>
+                        <li id="foto04"><span>Sensação de uma tela de 50"</span></li>
+                        <li id="foto05"><span>Vários tipos de lente</span></li>
+                        <li id="foto06"><span>Informações importantes</span></li>
+                        <!-- li(define um item da lista), identificador(id) "foto1", span é utilizada para agrupar e estilizar partes específicas de um texto dentro de um elemento maior -->
+                    </ul>
+                </article>
+            </section>
+            <footer id="rodape"> <!-- configue or configuração do radape -->
+                <p>Copyright &copy; 2023 - by Jhonathan Salomé<br/>
+                <a href="http://facebook.com.br" target="_blank">Facebook</a> | 
+                <a href="http://twitter.com.br" target="_blank">Twitter</a></p> <!-- links -->
+            </footer>
+        </div>
+    </body>
+</html>
